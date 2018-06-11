@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Contacts Manager - GLSID1</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body>
+  <nav class="orange lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo center">
+
+        <!--Contacts Manager -->
+      </a>
+     </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container center">
+      <br><br>
+      <img class="responsive-img center" src="imgs/logo2.png" alt="logo">
+      <h1 class="header center orange-text">e-Contacts</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">
+          An easy way to manage your contacts !
+        </h5>
+      </div>
+      <!--div class="row center">
+        <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">
+          Create Account
+        </a>
+      </div-->
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+
+    <div class="section">
+
+      <h3 class="orange-text">Add Contact</h3>
+
+      <div class="add_contact_form">
+        <div class="divider"></div><br>
+        <div id="contact_add" class="contact">
+          <div class="row">
+            <form onsubmit="add_contact_form(event);">
+              <div class="col s3 contact_image center">
+                <img src="imgs/def-img.jpg" alt="" class="responsive-img circle">
+                <div class="file-field input-field">
+                  <input id="contact_image" type="file" required>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col s7 contact_infos">
+
+                <div class="contact_name">
+                  <i class="material-icons">person</i><br>
+
+                  <div class="input-field">
+                    <input id="first_name" type="text" required>
+                    <label for="first_name">Fisrt Name</label>
+                  </div>
+
+                  <div class="input-field">
+                    <input id="last_name" type="text" required>
+                    <label for="last_name">Last Name</label>
+                  </div>
+
+                </div>
+
+                <div class="contact_email">
+                  <i class="material-icons">email</i>
+
+                  <div class="input-field">
+                    <input id="email" type="email" class="validate" required>
+                    <label for="email" data-error="wrong" data-success="">Email</label>
+                  </div>
+
+                </div>
+
+                <div class="contact_number_phone">
+                  <i class="material-icons">phone</i>
+                  <input id="number_phone" type="text" name="number_phone" placeholder="06 77 88 55 99" required>
+                  <span class="number_phone"></span>
+                </div>
+
+
+
+              </div>
+
+              <div class="col s2 options">
+                <br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br>
+                <div class="add">
+                  <button  class="btn-floating btn-large waves-effect waves-light blue" type="submit" name="action">
+                    <i class="material-icons">add</i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <h3 class="orange-text">Contact List</h3>
+
+      <div class="container">
+        <div class="row contact_list">
+
+        </div>
+      </div>
+      <div id="contact_template" >
+        <div id="contact">
+
+         <div class="divider"></div><br>
+         <div id="contact_container">
+
+          <div class="row">
+
+            <div class="col s3 contact_image">
+              <img src="#" alt="" class="responsive-img circle">
+             <!--
+              <img src="http://lorempixel.com/100/100?q=" alt="" class="responsive-img circle">
+            -->
+            </div>
+
+            <div class="col s7 contact_infos">
+
+              <div class="contact_name">
+                <i class="material-icons">person</i>
+                <span class="last_name">
+                  LAST NAME
+                </span>,
+                <span class="first_name">
+                  First_name
+                </span>
+              </div>
+
+              <div class="contact_email">
+                <i class="material-icons">email</i>
+                <span class="email">email@example.com</span>
+              </div>
+
+              <div class="contact_number_phone">
+                <i class="material-icons">phone</i>
+                <span class="number_phone">06 77 88 55 99</span>
+              </div>
+
+            </div>
+
+            <div class="col s2 options">
+              <div class="edit" >
+                <a class="btn-floating waves-effect waves-light green">
+                  <i class="material-icons">edit</i>
+                </a>
+              </div>
+              <p></p>
+              <div class="delete">
+                <a class="btn-floating waves-effect waves-light deep-orange">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+         </div>
+
+      </div>
+      </div>
+
+    </div>
+
+    <br><br>
+
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <!--div class="col l6 s12"-->
+        <div>
+          <h5 class="white-text">AIT BAHA Anas</h5>
+          <p class="grey-text text-lighten-4">
+            Engineer student<br>
+            Software Engineering & Distributed Computing Systems.<br>
+
+            <a class="white-text" href="http://www.enset-media.ac.ma/">
+              ENSET Mohammedia
+            </a>.<br>
+
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="https://www.facebook.com/ans1genie">AIT BAHA Anas</a>
+        - 2017
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/firebase.js"></script>
+  <!--script src="js/init.js"></script-->
+  <script>
+
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyAa1UiSKQYUTl7VDaUta6TLjSV8LlrPH-s",
+          authDomain: "contactmanager-a3c5c.firebaseapp.com",
+          databaseURL: "https://contactmanager-a3c5c.firebaseio.com",
+          projectId: "contactmanager-a3c5c",
+          storageBucket: "contactmanager-a3c5c.appspot.com",
+          messagingSenderId: "248150243871"
+      };
+      firebase.initializeApp(config);
+
+      var db_ref = firebase.database().ref('contacts/');
+      var store = firebase.storage();
+      var store_ref = store.ref('images/');
+
+      $('.contact_image  > img').click(function () {
+          $("#contact_image").trigger('click');
+      });
+
+      function uploadImage(file,contact){
+          var store_ref_img = store_ref.child(file.name);
+          var task = store_ref_img.put(file);
+          task.on('state_changed',
+              function progress(snapshot) {
+
+          },
+              function error(err) {
+              
+          },
+              function complete() {
+                  db_ref.push(contact);
+                  //console.log('finished : ',task.snapshot.downloadURL);
+              }
+          );
+      }
+
+      function setImageURL($img, name_img) {
+          var store_ref_img = store_ref.child(name_img);
+          store_ref_img.getDownloadURL().then(function(url)                             {
+              //return url;
+              $img.attr('src',url);
+          }).catch(function(error) {
+              console.error(error);
+          });
+      }
+      /// add to firebase
+      function add_contact_form(evt){
+          evt.preventDefault();
+          /// zid l3ibat l bdd d firebase
+
+          //
+          var _img = $('#contact_image');
+          //_img.trigger('push');
+          var files = _img.prop('files');
+          var fileName = files[0].name;
+
+          uploadImage(files[0], {
+              last_name : $('#last_name').val(),
+              first_name : $('#first_name').val(),
+              email : $('#email').val(),
+              number_phone : $('#number_phone').val(),
+              img_src :fileName
+          });
+          //
+
+          // todo : recuperer la clé pour sauvgarder l'image dans le cloud
+
+
+          /// vider kolchi s
+          /*
+          $('#last_name').val('');
+          $('#first_name').val('');
+          $('#email').val('');
+          $('#number_phone').val('');
+          $('#contact_image').val('');
+          */
+          $('form')[0].reset();
+
+          $('#first_name').focus();
+      }
+      // listener de l'ajout
+      db_ref.on('child_added',contact_added);
+      db_ref.on('child_removed',child_removed);
+
+      function contact_added(snap) {
+          //console.log(snap.key,snap.val());
+          add_contact({
+              id : snap.key,
+              contact : snap.val()
+          });
+      }
+
+      function child_removed(snap) {
+          remove_contact(snap.key);
+      }
+      /// add to dom
+      function add_contact(fb_contact){
+          var contact = fb_contact.contact;
+          /// todo
+          var dup = $('#contact_template > #contact').clone();
+          dup.attr('id',fb_contact.id);
+          dup.find('.last_name').text(contact.last_name);
+          dup.find('.first_name').text(contact.first_name);
+          dup.find('.email').text(contact.email);
+          dup.find('.number_phone').text(contact.number_phone);
+
+          var store_ref_img = store_ref.child(contact.img_src);
+          store_ref_img.getDownloadURL().then(function(url)                             {
+              dup.find('.contact_image > img').attr('src',url);
+
+              dup.find('.options > .delete').click(function () {
+                  if(confirm())
+                      db_ref.child(fb_contact.id).remove();
+              });
+
+              dup.find('.options > .edit').click(function () {
+                  // todo : launch the modal asso
+              });
+
+              $('.contact_list').prepend(dup);
+              dup.fadeIn(500);
+
+          }).catch(function(error) {
+              console.error(error);
+          });
+
+
+      }
+
+      function remove_contact(id) {
+          $('#'+id).fadeOut(500,function () {
+              $(this).remove();
+          });
+      }
+
+  </script>
+  </body>
+</html>
